@@ -3,15 +3,14 @@ pipeline {
     agent any
     stages {
         stage('One') {
-            agent { docker 'openjdk:8-jre' } 
             steps {
                 echo 'Hello, JDK'
-                sh 'java -version'
+                java -version
             }
         }
 		stage('Two') {
             steps {
-                sh 'java -jar exp-0.0.1-SNAPSHOT-jar-with-dependencies.jar'
+                java -jar exp-0.0.1-SNAPSHOT-jar-with-dependencies.jar
             }
         }
 		stage('Three') {
