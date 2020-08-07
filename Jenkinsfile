@@ -10,7 +10,7 @@ pipeline {
         }
 		stage('Two') {
             steps {
-                java -jar exp-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+                java -jar 'exp-0.0.1-SNAPSHOT-jar-with-dependencies.jar'
             }
         }
 		stage('Three') {
