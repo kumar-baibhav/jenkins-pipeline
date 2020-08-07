@@ -1,15 +1,11 @@
 
 pipeline {
     agent any
-	environment {
-		USE_JDK = 'true'
-		JDK ='C:/Program Files/Zulu/zulu-8'
-	}
     stages {
         stage('One') {
             steps {
                 echo 'Hello, JDK'
-                bat 'java -version'
+                bat 'C:/Program Files/Zulu/zulu-8/bin/java -version'
             }
         }
 		stage('Two') {
