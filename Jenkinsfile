@@ -5,7 +5,7 @@ pipeline {
         stage('One') {
             steps {
                 echo 'Hello, JDK'
-                bat 'C:/Program Files/Zulu/zulu-8/bin/java -version'
+                bat '"C:/Program Files/Zulu/zulu-8/bin/java" -version'
             }
         }
 		stage('Two') {
