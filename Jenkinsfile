@@ -10,23 +10,8 @@ pipeline {
         }
 		stage('Two') {
             steps {
-                //java -jar 'exp-0.0.1-SNAPSHOT-jar-with-dependencies.jar'
-				echo 'java'
+                bat '"C:/Program Files/Zulu/zulu-8/bin/java" jar C:/Users/kumar/eclipse-workspace/exp/target/exp-0.0.1-SNAPSHOT-jar-with-dependencies.jar'
             }
         }
-		stage('Three') {
-            parallel {
-                stage('Unit Test') {
-					steps {
-						echo 'running unit test'
-					}
-				}
-				stage('Integration test') {
-					steps {
-						echo 'running integration test'
-					}
-				}
-			}
-		}
 	}
 }
