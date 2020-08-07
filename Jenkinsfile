@@ -1,6 +1,10 @@
 
 pipeline {
     agent any
+	environment {
+		USE_JDK = 'true'
+		JDK ='C:\Program Files\Zulu\zulu-8\bin'
+	}
     stages {
         stage('One') {
             steps {
