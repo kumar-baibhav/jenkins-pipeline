@@ -5,7 +5,7 @@ pipeline {
         stage('One') {
             steps {
                 echo 'Hello, JDK'
-                java -version
+                bat 'java -version'
             }
         }
 		stage('Two') {
