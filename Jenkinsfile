@@ -5,7 +5,7 @@ pipeline {
 		stage('One') {
             steps {
                 START_PROCESS_INSTANCE = bat (
-									script: "curl -d "{}" -H "Content-Type: application/json"   http://localhost:8091/engine-rest/process-definition/key/bpmn-process/start",
+									script: 'curl -d "{}" -H "Content-Type: application/json"   http://localhost:8091/engine-rest/process-definition/key/bpmn-process/start',
 									returnStatus: true
 								) == 0
 				echo "Process instance creation : ${START_PROCESS_INSTANCE}"
